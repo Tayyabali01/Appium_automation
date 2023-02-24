@@ -68,8 +68,10 @@ delete_button.click()
 confirmationdelete_button = wait.until(EC.element_to_be_clickable((By.XPATH,'/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.Button[2]')))
 confirmationdelete_button.click()
 
+touch = TouchAction(driver)
+touch.press(x=30, y=53).move_to(x=1229, y=53).release().perform()
 
-"""Saving screenrecording of action performed"""
+'''"""Saving screenrecording of action performed"""
 video_rawadata = driver.stop_recording_screen()
 video_name = driver.current_activity + time.strftime("%Y_%m_%d_%H%M%S")
 
@@ -77,7 +79,7 @@ video_name = driver.current_activity + time.strftime("%Y_%m_%d_%H%M%S")
 filePath = os.path.join("C:/appium/Screenrecordings", video_name+".mp4")
 # print(filePath)
 with open(filePath,"wb") as vd:
-  vd.write(base64.b64decode(video_rawadata))
+  vd.write(base64.b64decode(video_rawadata))'''
 
 
 
