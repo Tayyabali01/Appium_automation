@@ -24,7 +24,7 @@ desired_cap = {
   "appium:deviceName": "Samsung s6edge",
   "appium:app": "C:\\appium\\Contacts Backup1.5_13-Feb-2023-release.apk"
 }
-
+#git check
 #
   # """MAKING CONNECTION WITH TESTING DEVICE"""
 driver = webdriver.Remote(command_executor="http://localhost:4723/wd/hub",desired_capabilities=desired_cap)
